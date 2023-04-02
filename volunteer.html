@@ -1,0 +1,153 @@
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.min.css?_v=20230402205914">
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20230402205914">
+   <title>volunteer</title>
+</head>
+
+</head>
+
+<body style="margin-bottom: 0;">
+
+   <section class="volunteer">
+      <div class="volunteer__container ">
+         <div class="volunteer__top">
+            <h2 class="volunteer__title">Volunteer</h2>
+            <span class="donate-line-left desktop"></span>
+            <span class="donate-line-right desktop"></span>
+         </div>
+         <div class="volunteer__content">
+            <p class="volunteer__text-right">
+               At Elman Peace we offer internship and volunteer opportunities in Somalia for groups and individuals.
+            </p>
+            <p class="volunteer__text-left">This gives participants a chance to contribute to one of our projects
+               whilst experiencing life as part of the community in Somalia. We run a diverse range of projects, so
+               whether you are a professional or a student, you will be able to find a volunteer posting in a field
+               that suits your interest, experience or studies.
+            </p>
+            <div class="volunteer__text-block">
+               <p class="volunteer__text-big">Our volunteer intakes are twice a year <span>Spring (March – May) and
+                     Summer (June –
+                     September).</span> We have
+                  an option of: <span>2 weeks, 1 month & 3 months</span>
+               </p>
+               <p class="volunteer__text-small">If you join our team as a volunteer, we will cover your food,
+                  accommodation, in-country transport
+                  and security costs for the duration of your placement. Travel to Somalia will not be covered.
+               </p>
+            </div>
+         </div>
+         <div class="form__top">
+            <h3 class="form__title">Apply for a Volunteer Post</h3>
+            <span class="donate-line-left desktop"></span>
+            <span class="donate-line-right desktop"></span>
+         </div>
+         <form class="form" action="" method="">
+            <input class="form__name" type="text" placeholder="Name">
+            <input class="form__address" type="text" placeholder="Address">
+            <input class="form__city" type="text" placeholder="City">
+            <input class="form__country" type="text" placeholder="Country">
+            <div class="form__phone-block">
+               <div class="form__code">
+                  <div class="selected-item">
+                     <picture><source srcset="https://flagcdn.com/32x24/us.webp" type="image/webp"><img src="https://flagcdn.com/32x24/us.png" alt="USA" class="flag"></picture>
+                     <span class="code">Code</span>
+                  </div>
+                  <ul class="options hide">
+
+                  </ul>
+                  <input type="hidden" id="country-code" name="country-code" required>
+               </div>
+               <input id="phone" class="form__phone" name="phone" type="tel" placeholder="Phone">
+            </div>
+            <input class="form__email" type="text" placeholder="Email">
+            <input class="form__experience" type="text" placeholder="Previous volunteer experience Name">
+            <input class="form__occupation" type="text" placeholder="Current occupation">
+            <input class="form__education" type="text" placeholder="Education & skills background">
+            <button class="form button" type="submit">send</button>
+         </form>
+      </div>
+   </section>
+   <div class="volunteer__bg">
+      <picture><source srcset="img/volunteer.webp" type="image/webp"><img class="volunteer__bg-img" src="img/volunteer.jpg" alt=""></picture>
+      <picture><source srcset="img/noise-volunteer.webp" type="image/webp"><img class="volunteer__noise" src="img/noise-volunteer.png" alt=""></picture>
+   </div>
+
+
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js?_v=20230402205914"></script>
+   <script>
+
+      const select = document.getElementById('country-code');
+      const selectedItem = document.querySelector('.selected-item');
+      const flagImg = selectedItem.querySelector('.flag');
+      const codeSpan = selectedItem.querySelector('.code');
+      const optionsList = document.querySelector('.options');
+
+      // Запрос данных с API
+      axios.get('https://flagcdn.com/en/codes.json')
+         .then(response => {
+            const countries = response.data;
+
+
+            // Добавление элементов в выпадающий список
+            for (const code in countries) {
+               const li = document.createElement('li');
+               li.dataset.code = code;
+               li.innerHTML = `
+        <picture><source srcset="https://flagcdn.com/32x24/${code.toLowerCase()}.webp" type="image/webp"><img src="https://flagcdn.com/32x24/${code.toLowerCase()}.png" alt="${countries[code]}" class="flag"></picture>
+        <span class="country-name">${countries[code]}</span>
+      `;
+               optionsList.appendChild(li);
+            }
+
+
+            // Обработчик клика на элементе списка
+            optionsList.addEventListener('click', (event) => {
+               const li = event.target.closest('li');
+               if (!li) return;
+
+               const code = li.dataset.code;
+               const countryName = countries[code];
+
+
+
+               flagImg.src = `https://flagcdn.com/w20/${code.toLowerCase()}.png`;
+               // codeSpan.textContent = code;
+               selectedItem.classList.remove('hide');
+               select.value = code;
+               select.dispatchEvent(new Event('change'));
+            });
+
+            // Обработчик клика на selected-item
+            selectedItem.addEventListener('click', () => {
+               optionsList.classList.toggle('hide');
+            });
+
+            // Обработчик клика на document, чтобы скрыть выпадающий список, если клик был вне его
+            document.addEventListener('click', (event) => {
+               if (!event.target.closest('.form__code')) {
+                  optionsList.classList.add('hide');
+               }
+            });
+            document.addEventListener('click', (event) => {
+               if (event.target.closest('.options li')) {
+                  optionsList.classList.add('hide');
+               }
+            });
+         })
+         .catch(error => {
+            console.log(error);
+         });
+
+   </script>
+</body>
+
+</html>

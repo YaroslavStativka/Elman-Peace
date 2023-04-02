@@ -1,0 +1,161 @@
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.min.css?_v=20230402205914">
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20230402205914">
+   <title>Partnership</title>
+</head>
+
+</head>
+
+<body style="margin-bottom: 0;">
+
+   <section class="volunteer">
+      <div class="volunteer__container ">
+         <div class="volunteer__top">
+            <h2 class="volunteer__title">Partnership</h2>
+            <span class="donate-line-left desktop"></span>
+            <span class="donate-line-right desktop"></span>
+         </div>
+         <div class="partnership__content">
+            <p class="partnership__text-left">
+               Partner With Us
+            </p>
+            <p class="partnership__text-full desktop">Elman Peace is a leading awards winning institution. We are
+               internationally
+               recognized for our reputation, and proven record to generate real change on a local, national and
+               international scale. Our future plans include expansions throughout Africa and the Middle East; investing
+               in safer, healthier communities, training skilled workers and a better educated generation of future
+               leaders.
+            </p>
+            <div class="partnership__text-block">
+               <p class="partnership__text-big">Be a part of this visible change by partnering with Elman Peace in the
+                  following sectors of institutional priorities:
+               </p>
+               <ul class="partnership__list">
+                  <li>Vocational Skills Training & Job Creation through Technology and Innovation</li>
+                  <li>Social Entrepreneurship and Economic Empowerment through Enterprise Development</li>
+                  <li>Experimental & Creative Therapy for Psychosocial healing through the arts</li>
+                  <li>Youth Leadership & Peer-2-Peer Mentorship</li>
+                  <li>Child Protection and Rehabilitation of Children in Armed Conflict</li>
+                  <li>Ending Violence Against Women & Girls</li>
+                  <li>Implementation of UNSCR Resolutions, 1325 & 2250</li>
+                  <li>Infrastructure and Community Development for Peace</li>
+               </ul>
+            </div>
+         </div>
+         <div class="form__top">
+            <h3 class="form__title">Partnership Form</h3>
+            <span class="donate-line-left desktop"></span>
+            <span class="donate-line-right desktop"></span>
+         </div>
+         <form class="form" action="" method="get">
+            <input class="form__name" type="text" placeholder="Name">
+            <input class="form__email" type="text" placeholder="Email">
+            <div class="radio">
+               <p class="label-radio">Are you interested in partnering with us on 1 or more of our institutional
+                  priorities
+                  listed above?</p>
+               <div class="radio-input input-1">
+                  <input type="radio" class="custom-radio" id="radio-1-yes" name="radio-1" value="yes" checked>
+                  <label for="radio-1-yes">Yes</label>
+                  <input type="radio" class="custom-radio" id="radio-1-no" name="radio-1" value="no">
+                  <label for="radio-1-no">No</label>
+               </div>
+
+               <p class="label-radio">Do you have an idea for a collaboration with us not listed above?</p>
+               <div class="radio-input">
+                  <input type="radio" class="custom-radio" id="radio-2-yes" name="radio-2" value="yes" checked>
+                  <label for="radio-2-yes">Yes</label>
+                  <input type="radio" class="custom-radio" id="radio-2-no" name="radio-2" value="no">
+                  <label for="radio-2-no">No</label>
+               </div>
+            </div>
+
+            <input class="form__experience" type="text" placeholder="Message">
+            <button class="form button" type="submit">send</button>
+         </form>
+      </div>
+   </section>
+   <div class="volunteer__bg">
+      <picture><source srcset="img/partnership.webp" type="image/webp"><img class="volunteer__bg-img" src="img/partnership.jpg" alt=""></picture>
+      <picture><source srcset="img/partnership-noise.webp" type="image/webp"><img class="volunteer__noise" src="img/partnership-noise.png" alt=""></picture>
+   </div>
+
+
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js?_v=20230402205914"></script>
+   <script>
+
+      const select = document.getElementById('country-code');
+      const selectedItem = document.querySelector('.selected-item');
+      const flagImg = selectedItem.querySelector('.flag');
+      const codeSpan = selectedItem.querySelector('.code');
+      const optionsList = document.querySelector('.options');
+
+      // Запрос данных с API
+      axios.get('https://flagcdn.com/en/codes.json')
+         .then(response => {
+            const countries = response.data;
+
+
+            // Добавление элементов в выпадающий список
+            for (const code in countries) {
+               const li = document.createElement('li');
+               li.dataset.code = code;
+               li.innerHTML = `
+        <picture><source srcset="https://flagcdn.com/32x24/${code.toLowerCase()}.webp" type="image/webp"><img src="https://flagcdn.com/32x24/${code.toLowerCase()}.png" alt="${countries[code]}" class="flag"></picture>
+        <span class="country-name">${countries[code]}</span>
+      `;
+               optionsList.appendChild(li);
+            }
+
+
+            // Обработчик клика на элементе списка
+            optionsList.addEventListener('click', (event) => {
+               const li = event.target.closest('li');
+               if (!li) return;
+
+               const code = li.dataset.code;
+               const countryName = countries[code];
+
+
+
+               flagImg.src = `https://flagcdn.com/w20/${code.toLowerCase()}.png`;
+               // codeSpan.textContent = code;
+               selectedItem.classList.remove('hide');
+               select.value = code;
+               select.dispatchEvent(new Event('change'));
+            });
+
+            // Обработчик клика на selected-item
+            selectedItem.addEventListener('click', () => {
+               optionsList.classList.toggle('hide');
+            });
+
+            // Обработчик клика на document, чтобы скрыть выпадающий список, если клик был вне его
+            document.addEventListener('click', (event) => {
+               if (!event.target.closest('.form__code')) {
+                  optionsList.classList.add('hide');
+               }
+            });
+            document.addEventListener('click', (event) => {
+               if (event.target.closest('.options li')) {
+                  optionsList.classList.add('hide');
+               }
+            });
+         })
+         .catch(error => {
+            console.log(error);
+         });
+
+   </script>
+</body>
+
+</html>
