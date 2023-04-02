@@ -6766,7 +6766,7 @@ video::-webkit-media-controls-panel {
   .story__image,
   .work__image {
     width: 100%;
-    padding-top: 45%;
+    padding-top: 60%;
   }
 
   .story .scrollmagic-pin-spacer,
@@ -8215,7 +8215,7 @@ video::-webkit-media-controls-panel {
   }
 
   .bottom-equal__link-back {
-    color: #ffffff;
+    color: #0d1114;
     margin: -20px auto 68px 16px;
   }
 
