@@ -193,6 +193,7 @@ h3 {
 #slideEducation,
 #slideSport,
 #slidePeace {
+  width: 100%;
   height: 100%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -202,8 +203,8 @@ h3 {
 }
 
 .slide {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   display: inline-block;
 }
 
