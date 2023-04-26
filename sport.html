@@ -9,8 +9,8 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="css/style.min.css?_v=20230414015825">
-   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20230414015825">
+   <link rel="stylesheet" href="css/style.min.css?_v=20230427011334">
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20230427011334">
    <title>sport</title>
 </head>
 
@@ -19,15 +19,24 @@
 <body class="light">
    <header class="header mobile-flex">
 
-   <div class="header__burger">
+   <div class="header__burger burger">
       <span></span>
    </div>
    <nav class="header__menu menu">
       <ul class="menu__list">
          <li><a href="story.html" class="menu__link">Our Story</a></li>
-         <li><a href="human-rights.html" class="menu__link">Human rights</a></li>
-         <li><a href="sister-somalia.html" class="menu__link">Sister Somalia</a></li>
-         <li><a id="non-click-mob" href="#" class="menu__link">Education
+         <li><a href="#" class="menu__link non-click">Women leading Elman Peace
+               <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 2L6 6L10 2" stroke="#ffffff" stroke-width="3" stroke-linecap="round"
+                     stroke-linejoin="round" />
+               </svg>
+            </a>
+            <ul class="menu__sub-list">
+               <li><a href="fartun-adan.html" class="menu__sub-link">FARTUUN ADAN</a></li>
+               <li><a href="ilvad-elman.html" class="menu__sub-link">Ilwad Elman</a></li>
+            </ul>
+         </li>
+         <li><a href="#" class="menu__link non-click">Our Work
                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M2 2L6 6L10 2" stroke="#ffffff" stroke-width="3" stroke-linecap="round"
                      stroke-linejoin="round" />
@@ -38,13 +47,27 @@
                <li><a href="equal-voice.html" class="menu__sub-link">EQUAL VOICE</a></li>
             </ul>
          </li>
-         <li><a href="" class="menu__link">Training & Placing</a></li>
+         <li><a href="human-rights.html" class="menu__link">Human rights</a></li>
+         <li><a href="sister-somalia.html" class="menu__link">Sister Somalia</a></li>
+         <li><a href="education.html" class="menu__link">Education</a></li>
+         <li><a href="training-and-placing.html" class="menu__link">Training & Placing</a></li>
          <li><a href="drop.html" class="menu__link">Drop the Gun, Pick up the Pen</a></li>
          <li><a href="sport.html" class="menu__link">Sports 4 Development</a></li>
-         <li><a href="peace.html" class="menu__link">Peace by Africa</a></li>
-         <li><a href="" class="menu__link">Get Involved</a></li>
-         <li><a href="" class="menu__link">Press</a></li>
-         <li><a href="" class="menu__link">Awards</a></li>
+         <li><a href="peace.html" class="menu__link ">Peace by Africa</a></li>
+         <li><a href="#" id="non-click-involved" class="menu__link">Get Involved
+               <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 2L6 6L10 2" stroke="#ffffff" stroke-width="3" stroke-linecap="round"
+                     stroke-linejoin="round" />
+               </svg>
+            </a>
+            <ul class="menu__sub-list">
+               <li><a href="donate.html" class="menu__sub-link">Donate</a></li>
+               <li><a href="volunteer.html" class="menu__sub-link">Volunteer</a></li>
+               <li><a href="partnership.html" class="menu__sub-link">Partnership</a></li>
+            </ul>
+         </li>
+         <!-- <li><a href="#press" class="menu__link scroll-link">Press</a></li>
+         <li><a href="#awards" class="menu__link scroll-link">Awards</a></li> -->
       </ul>
       <div class="menu__social">
          <a href="#" class="menu__social-item">
@@ -75,7 +98,7 @@
          </a>
       </div>
    </nav>
-   <a href="" class="header__logo">
+   <a href="index.html" class="header__logo">
       <img src="img/header-logo.svg" alt="header-logo">
    </a>
    <div class="header__image">
@@ -101,10 +124,10 @@
                </svg>
             </a>
             <div class="human-single__top">
-               <h2 class="human-single__title">SPORTS 4 DEVELOPMENT</h2>
+               <h2 class="human-single__title sport-single-title">SPORTS 4 DEVELOPMENT</h2>
             </div>
             <div class="sport-content__img mobile">
-               <picture><source srcset="img/work/sister.webp" type="image/webp"><img src="img/work/sister.jpg" alt="story"></picture>
+               <picture><source srcset="img/sport/sport1.webp" type="image/webp"><img src="img/sport/sport1.jpg" alt="story"></picture>
                <div class="mobile story-line"></div>
                <div class="story-block mobile"></div>
             </div>
@@ -122,7 +145,7 @@
                <div class="block-dark-second-sport-top desktop"></div>
                <div class="second-sport__image-block">
                   <div class="second-sport__image">
-                     <picture><source srcset="img/sport1.webp" type="image/webp"><img src="img/sport1.jpg" alt="human"></picture>
+                     <picture><source srcset="img/sport/sport1.webp" type="image/webp"><img src="img/sport/sport1.jpg" alt="human"></picture>
                      <div class="mobile story-line"></div>
                      <div class="story-block mobile"></div>
                   </div>
@@ -137,10 +160,10 @@
                </div>
             </div>
             <div class="sport-single__third third-sport">
-               <span class="line-third-sport-full desktop"></span>
+               <div class="line-third-sport-full desktop"></div>
                <div class="third-sport__image-block ">
                   <div class="third-sport__image">
-                     <picture><source srcset="img/sport2.webp" type="image/webp"><img src="img/sport2.jpg" alt="human"></picture>
+                     <picture><source srcset="img/sport/sport2.webp" type="image/webp"><img src="img/sport/sport2.jpg" alt="human"></picture>
                      <div class="mobile story-line"></div>
                      <div class="story-block mobile"></div>
                   </div>
@@ -148,7 +171,7 @@
                </div>
             </div>
             <div class="sport-single__fourth fourth-sport">
-               <span class="line-fourth-sport-long desktop"></span>
+               <div class="line-fourth-sport-long desktop"></div>
                <span class="line-fourth-sport-short desktop"></span>
                <div class="block-dark-fourth-sport desktop"></div>
                <p class="fourth-sport__text">We also know the potential of this field is not fully tested in Somalia due
@@ -187,45 +210,13 @@
                   peers, find common ground and have positive social experiences.
                </p>
             </div>
-            <div class="sport-single__sixth sixth-sport">
-               <span class="line-sixth-sport-long desktop"></span>
-               <span class="line-sixth-sport-short desktop"></span>
-               <div class="block-sixth-sport desktop"></div>
-               <div class="sixth-sport__image-block">
-                  <div class="sixth-sport__image">
-                     <picture><source srcset="img/sport5.webp" type="image/webp"><img src="img/sport5.jpg" alt="human"></picture>
-                     <div class="mobile story-line"></div>
-                     <div class="story-block mobile"></div>
-                  </div>
-                  <p class="sixth-sport__img-label label-sport">Daily Paper</p>
-               </div>
-            </div>
             <div class="sport-single__seventh seventh-sport">
                <div class="seventh-sport__content">
                   <p class="seventh-sport__text">A challenge in Somalia is the limitations in the breadth and nature
                      of experiences available to young people to grow and express themselves, as well as poor access to
                      quality mentoring.
                   </p>
-                  <div class="seventh-sport__image-block">
-                     <div class="seventh-sport__image">
-                        <picture><source srcset="img/sport6.webp" type="image/webp"><img src="img/sport6.jpg" alt=""></picture>
-                        <div class="mobile story-line"></div>
-                        <div class="story-block mobile"></div>
-                     </div>
-                     <p class="seventh-sport__img-label label-sport">Nike</p>
-                  </div>
-               </div>
-            </div>
-            <div class="education-single__second second-education">
-               <span class="line-second-education desktop"></span>
-               <div class="block-dark-second-education desktop"></div>
-               <div class="eighth-sport__image-block">
-                  <div class="second-education__image">
-                     <picture><source srcset="img/education6.webp" type="image/webp"><img src="img/education6.jpg" alt="education"></picture>
-                     <div class="mobile story-line"></div>
-                     <div class="story-block mobile"></div>
-                  </div>
-                  <p class="eighth-sport__img-label label-sport">Puma</p>
+
                </div>
             </div>
             <div class="education-single__third third-education reverse">
@@ -238,65 +229,39 @@
                </p>
                <div class="nineth-sport__image-block">
                   <div class="nineth-sport__image">
-                     <picture><source srcset="img/education7.webp" type="image/webp"><img src="img/education7.jpg" alt="education"></picture>
+                     <picture><source srcset="img/sport/sport3.webp" type="image/webp"><img src="img/sport/sport3.jpg" alt="education"></picture>
                      <div class="mobile story-line"></div>
                      <div class="story-block mobile"></div>
                   </div>
                   <p class="nineth-sport__img-label label-sport">GOA</p>
                </div>
             </div>
-            <div class="education-single__second second-education">
-               <span class="line-second-education desktop"></span>
-               <div class="block-dark-second-education desktop"></div>
-               <div class="eighth-sport__image-block">
-                  <div class="second-education__image">
-                     <picture><source srcset="img/sport9.webp" type="image/webp"><img src="img/sport9.jpg" alt="education"></picture>
-                     <div class="mobile story-line"></div>
-                     <div class="story-block mobile"></div>
+            <div class="sport-single__sponsors sponsors-sport">
+               <span class="line-third-education desktop"></span>
+               <div class="block-third-second-education desktop"></div>
+               <span class="line-third-sport  mobile"></span>
+               <div class="block-third-sport  mobile"></div>
+               <h3 class="sponsors-sport__title">Sponsors:</h3>
+               <div class="sponsors-sport__items">
+                  <div class="sponsors-sport__item">
+                     <picture><source srcset="img/sport1.webp" type="image/webp"><img src="img/sport1.png" alt=""></picture>
                   </div>
-                  <p class="eighth-sport__img-label label-sport">Masai Ujiri</p>
-               </div>
-            </div>
-            <div class="sport-single__tenth tenth-sport desktop">
-               <div class="tenth-sport__image-block">
-                  <p class="tenth-sport__img-label label-sport">Basketball</p>
-                  <div class="tenth-sport__image">
-                     <picture><source srcset="img/sport2.webp" type="image/webp"><img src="img/sport2.jpg" alt="human"></picture>
-                     <div class="mobile story-line"></div>
-                     <div class="story-block mobile"></div>
+                  <div class="sponsors-sport__item">
+                     <picture><source srcset="img/sport2.webp" type="image/webp"><img src="img/sport2.png" alt=""></picture>
+                  </div>
+                  <div class="sponsors-sport__item">
+                     <picture><source srcset="img/sport3.webp" type="image/webp"><img src="img/sport3.png" alt=""></picture>
+                  </div>
+                  <div class="sponsors-sport__item">
+                     <picture><source srcset="img/sport4.webp" type="image/webp"><img src="img/sport4.png" alt=""></picture>
                   </div>
                </div>
             </div>
-            <div class="nineth-sport__image-block second mobile">
-               <div class="nineth-sport__image">
-                  <picture><source srcset="img/education7.webp" type="image/webp"><img src="img/education7.jpg" alt="education"></picture>
-                  <div class="mobile story-line"></div>
-                  <div class="story-block mobile"></div>
-               </div>
-               <p class="nineth-sport__img-label label-sport">Laureus Sports</p>
-            </div>
-            <div class="sport-single__eleventh fourth-frontline">
-               <span class="line-fourth-frontline-full"></span>
-               <div class="block-dark-fourth-frontline desktop"></div>
-               <div class="fourth-frontline__images">
-                  <div class="eleventh-sport__image-block">
-                     <p class="tenth-sport__img-label label-sport">Unicef</p>
-                     <div class="tenth-sport__image">
-                        <picture><source srcset="img/sport11.webp" type="image/webp"><img src="img/sport11.jpg" alt=""></picture>
 
-                     </div>
-                  </div>
-                  <div class="eleventh-sport__image-block">
-                     <p class="tenth-sport__img-label label-sport">Waves for changes</p>
-                     <div class="tenth-sport__image">
-                        <picture><source srcset="img/sport12.webp" type="image/webp"><img src="img/sport12.jpg" alt=""></picture>
-
-                     </div>
-                  </div>
-               </div>
-            </div>
             <div class="sport-single__bottom bottom-sport">
                <div class="bottom-sport__content">
+                  <span class="line-third-education desktop"></span>
+                  <div class="block-third-second-education desktop"></div>
                   <p class="bottom-sport__text">In this context, we see sports for development as a more cost-effective
                      and preventative approach for dealing with social problems and consequences of conflict.
                   </p>
@@ -304,7 +269,7 @@
                </div>
                <div class="bottom-sport__image-block">
                   <div class="bottom-sport__image">
-                     <picture><source srcset="img/sport11.webp" type="image/webp"><img src="img/sport11.jpg" alt=""></picture>
+                     <picture><source srcset="img/education/sport.webp" type="image/webp"><img src="img/education/sport.jpg" alt=""></picture>
                      <div class="mobile story-line"></div>
                      <div class="story-block mobile"></div>
                   </div>
@@ -318,42 +283,9 @@
    <div class="footer__top"></div>
    <div class="footer__bottom">
       <div class="footer__container _container">
-         <nav class="footer__menu menu-footer">
-            <ul id="mob-footer-list" class="menu-footer__list left">
-               <li><a href="story.html" class="menu-footer__link">Our Story</a></li>
 
-               <li><a href="human-rights.html" class="menu-footer__link">Human rights</a></li>
-               <li><a href="sister-somalia.html" class="menu-footer__link">Sister Somalia</a></li>
-               <li>
-                  <a id="non-click-footer" href="" class="mob menu-footer__link">Education
-                     <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 2L6 6L10 2" stroke="#ffffff" stroke-width="3" stroke-linecap="round"
-                           stroke-linejoin="round" />
-                     </svg>
-                  </a>
-                  <ul class="menu-footer__sub-list">
-                     <li><a href="frontline-activism.html" class="menu-footer__sub-link">FRONTLINE ACTIVISM</a></li>
-                     <li><a href="equal-voice.html" class="menu-footer__sub-link">EQUAL VOICE</a></li>
-                  </ul>
-               </li>
-               <li>
-                  <a href="" class="menu-footer__link">Training & Placing
-
-                  </a>
-
-               </li>
-            </ul>
-            <ul class="menu-footer__list right">
-               <li><a href="drop.html" class="menu-footer__link">Drop the Gun, Pick up the Pen</a></li>
-               <li><a href="sport.html" class="menu-footer__link">Sports 4 Development</a></li>
-               <li><a href="peace.html" class="menu-footer__link">Peace by Africa</a></li>
-               <li><a href="#" class="menu-footer__link">Get Involved</a></li>
-               <li><a href="#" class="menu-footer__link">Press</a></li>
-               <li><a href="#" class="menu-footer__link">Awards</a></li>
-            </ul>
-         </nav>
          <div class="footer__socials">
-            <a href="#" class="footer__logo">
+            <a href="index.html" class="footer__logo">
                <img src="img/header-logo.svg" alt="footer-logo">
             </a>
             <div class="footer__contacts">
@@ -392,8 +324,8 @@
       <p>© Elman Peace 2023. All rights reserved.</p>
    </div>
 </footer>
-   <script src="https://code.jquery.com/jquery-3.6.3.min.js?_v=20230414015825"></script>
-   <script src="js/app.min.js?_v=20230414015825"></script>
+   <script src="https://code.jquery.com/jquery-3.6.3.min.js?_v=20230427011334"></script>
+   <script src="js/app.min.js?_v=20230427011334"></script>
 </body>
 
 </html>

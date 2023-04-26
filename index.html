@@ -4,23 +4,32 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="css/style.min.css?_v=20230414184359">
-   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20230414184359">
+   <link rel="stylesheet" href="css/style.min.css?_v=20230427011334">
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20230427011334">
    <title>Главная</title>
 </head>
 
 <body class="controller">
-   <header class="header">
+   <header class="header" id="header">
 
    <div class="header__burger">
       <span></span>
    </div>
    <nav class="header__menu menu">
       <ul class="menu__list">
-         <li><a href="#story" class="menu__link">Our Story</a></li>
-         <li><a href="human-rights.html" class="menu__link">Human rights</a></li>
-         <li><a href="sister-somalia.html" class="menu__link">Sister Somalia</a></li>
-         <li><a id="non-click" href="#" class="menu__link">Education
+         <li><a href="story.html" class="menu__link">Our Story</a></li>
+         <li><a href="#" class="menu__link non-click">Women leading Elman Peace
+               <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 2L6 6L10 2" stroke="#ffffff" stroke-width="3" stroke-linecap="round"
+                     stroke-linejoin="round" />
+               </svg>
+            </a>
+            <ul class="menu__sub-list">
+               <li><a href="fartun-adan.html" class="menu__sub-link">FARTUUN ADAN</a></li>
+               <li><a href="ilvad-elman.html" class="menu__sub-link">Ilwad Elman</a></li>
+            </ul>
+         </li>
+         <li><a href="#" class="menu__link non-click">Our Work
                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M2 2L6 6L10 2" stroke="#ffffff" stroke-width="3" stroke-linecap="round"
                      stroke-linejoin="round" />
@@ -31,13 +40,27 @@
                <li><a href="equal-voice.html" class="menu__sub-link">EQUAL VOICE</a></li>
             </ul>
          </li>
-         <li><a href="#training" class="menu__link">Training & Placing</a></li>
+         <li><a href="human-rights.html" class="menu__link">Human rights</a></li>
+         <li><a href="sister-somalia.html" class="menu__link">Sister Somalia</a></li>
+         <li><a href="education.html" class="menu__link">Education</a></li>
+         <li><a href="training-and-placing.html" class="menu__link">Training & Placing</a></li>
          <li><a href="drop.html" class="menu__link">Drop the Gun, Pick up the Pen</a></li>
          <li><a href="sport.html" class="menu__link">Sports 4 Development</a></li>
-         <li><a href="#peace" class="menu__link">Peace by Africa</a></li>
-         <li><a href="" class="menu__link">Get Involved</a></li>
-         <li><a href="" class="menu__link">Press</a></li>
-         <li><a href="#awards" class="menu__link">Awards</a></li>
+         <li><a href="peace.html" class="menu__link">Peace by Africa</a></li>
+         <li><a href="#" class="menu__link non-click">Get Involved
+               <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 2L6 6L10 2" stroke="#ffffff" stroke-width="3" stroke-linecap="round"
+                     stroke-linejoin="round" />
+               </svg>
+            </a>
+            <ul class="menu__sub-list">
+               <li><a href="donate.html" class="menu__sub-link">Donate</a></li>
+               <li><a href="volunteer.html" class="menu__sub-link">Volunteer</a></li>
+               <li><a href="partnership.html" class="menu__sub-link">Partnership</a></li>
+            </ul>
+         </li>
+         <li><a href="#press" class="menu__link scroll-link">Press</a></li>
+         <li><a href="#awards" class="menu__link scroll-link">Awards</a></li>
       </ul>
       <div class="menu__social">
          <a href="#" class="menu__social-item">
@@ -68,7 +91,7 @@
          </a>
       </div>
    </nav>
-   <a href="" class="header__logo">
+   <a href="index.html" class="header__logo">
       <img src="img/header-logo.svg" alt="header-logo">
    </a>
    <div class="header__image">
@@ -638,7 +661,7 @@
                   <h3 class="author__name mobile">TRAINING & PLACING</h3>
                   <div class="content__top">
                      <div class="content__img ">
-                        <picture><source srcset="img/education/tap-training.webp" type="image/webp"><img src="img/education/tap-training.jpg" alt="story"></picture>
+                        <picture><source srcset="img/education/tap1.webp" type="image/webp"><img src="img/education/tap1.jpg" alt="story"></picture>
                      </div>
                      <div class="content__story story-2 desktop">
                         <p>
@@ -653,10 +676,10 @@
                      <div class="content__author author-second">
                         <h3 class="author__name desktop">TRAINING & PLACING</h3>
                         <p class="author__about">Providing marketable skills and connecting to employers.</p>
-                        <a href="" class="author__link second mobile">Read more</a>
+                        <a href="training-and-placing.html" class="author__link second">Read more</a>
                      </div>
                      <div class="content__img desktop">
-                        <picture><source srcset="img/education/training-2.webp" type="image/webp"><img src="img/education/training-2.jpg" alt="story"></picture>
+                        <picture><source srcset="img/education/tap2.webp" type="image/webp"><img src="img/education/tap2.jpg" alt="story"></picture>
                      </div>
                   </div>
                </div>
@@ -808,7 +831,7 @@
                      </div>
                      <div class="content__img desktop">
                         <video autoplay loop muted playsinline>
-                           <source src="files/ELMAN PEACE.mp4" type="video/mp4">
+                           <source src="files/video2.mp4" type="video/mp4">
                         </video>
                      </div>
                   </div>
@@ -853,9 +876,9 @@
             </div>
          </div>
       </section>
-      <section class="press">
+      <section id="press" class="press">
          <h2 class="press__title ">Press</h2>
-         <div id="press" class="press__items">
+         <div class="press__items">
             <a href="#" class="press__item item-press">
                <div class="item-press__img">
                   <img src="img/press/newYorkTimes.svg" alt="">
@@ -958,7 +981,7 @@
             </a>
             <a href="#" class="press__item item-press">
                <div class="item-press__img">
-                  <img src="img/press/HuffPost .svg" alt="">
+                  <img src="img/press/UN.svg" alt="">
                </div>
                <div class="item-press__content">
                   <p class="item-press__label">UN</p>
@@ -968,13 +991,50 @@
             </a>
             <a href="#" class="press__item item-press">
                <div class="item-press__img">
-                  <img src="img/press/BuzzFeed.svg" alt="">
+                  <img src="img/press/pri.svg" alt="">
                </div>
                <div class="item-press__content">
-                  <p class="item-press__label">Buzz Feed</p>
-                  <p class="item-press__text">This Charity Used The Mannequin Challenge To Highlight An
-                     Important
-                     Message</p>
+                  <p class="item-press__label">PRI</p>
+                  <p class="item-press__text">A Mogadishu-based mother and daughter team say youth can be brought back
+                     from religious extremism</p>
+               </div>
+            </a>
+            <a href="#" class="press__item item-press">
+               <div class="item-press__img">
+                  <img src="img/award1.svg" alt="">
+               </div>
+               <div class="item-press__content">
+                  <p class="item-press__label">Harvard University</p>
+                  <p class="item-press__text">Gleitsman Award Honors Work of Human Rights Advocates Fartuun Adan and
+                     Ilwad Elman</p>
+               </div>
+            </a>
+            <a href="#" class="press__item item-press">
+               <div class="item-press__img">
+                  <img src="img/award2.svg" alt="">
+               </div>
+               <div class="item-press__content">
+                  <p class="item-press__label">Kofi Annan Foundation</p>
+                  <p class="item-press__text">Ilwad Elman – Including youth is a priority
+                  </p>
+               </div>
+            </a>
+            <a href="#" class="press__item item-press">
+               <div class="item-press__img">
+                  <img src="img/awards-sid2.svg" alt="">
+               </div>
+               <div class="item-press__content">
+                  <p class="item-press__label">Sydney Opera House</p>
+                  <p class="item-press__text">Ilwad Elman - How to Change the World (All About Women 2014)</p>
+               </div>
+            </a>
+            <a href="#" class="press__item item-press">
+               <div class="item-press__img">
+                  <img src="img/award4.svg" alt="">
+               </div>
+               <div class="item-press__content">
+                  <p class="item-press__label">Aurora Prize</p>
+                  <p class="item-press__text">A mother and Daughter Rebuilding Somalia</p>
                </div>
             </a>
          </div>
@@ -1004,7 +1064,7 @@
                </div>
                <div class="swiper-slide">
                   <div class="swiper-slide__image">
-                     <img src="img/award3.svg" alt="">
+                     <img src="img/awards-sid.svg" alt="">
                   </div>
                   <h4 class="swiper-slide__title">Sydney Opera House</h4>
                   <p class="swiper-slide__text">Ilwad Elman - How to Change the World (All About Women 2014)</p>
@@ -1033,7 +1093,7 @@
                </div>
                <div class="swiper-slide">
                   <div class="swiper-slide__image">
-                     <img src="img/award3.svg" alt="">
+                     <img src="img/awards-sid.svg" alt="">
                   </div>
                   <h4 class="swiper-slide__title">Sydney Opera House</h4>
                   <p class="swiper-slide__text">Ilwad Elman - How to Change the World (All About Women 2014)</p>
@@ -1062,7 +1122,7 @@
                </div>
                <div class="swiper-slide">
                   <div class="swiper-slide__image">
-                     <img src="img/award3.svg" alt="">
+                     <img src="img/awards-sid.svg" alt="">
                   </div>
                   <h4 class="swiper-slide__title">Sydney Opera House</h4>
                   <p class="swiper-slide__text">Ilwad Elman - How to Change the World (All About Women 2014)</p>
@@ -1087,42 +1147,9 @@
    <div class="footer__top"></div>
    <div class="footer__bottom">
       <div class="footer__container _container">
-         <nav class="footer__menu menu-footer">
-            <ul class="menu-footer__list left">
-               <li><a href="#" class="menu-footer__link">Our Story</a></li>
-               <li><a href="#" class="menu-footer__link">Our Work</a></li>
-               <li><a href="#" class="menu-footer__link">Human rights</a></li>
-               <li><a href="#" class="menu-footer__link">Sister Somalia</a></li>
-               <li>
-                  <a href="javascript:void(0);" class="menu-footer__link">Education<svg width="12" height="8"
-                        viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 2L6 6L10 2" stroke="#ffffff" stroke-width="3" stroke-linecap="round"
-                           stroke-linejoin="round" />
-                     </svg>
-                  </a>
-                  <ul class="menu-footer__sub-list">
-                     <li><a href="#" class="menu-footer__sub-link">FRONTLINE ACTIVISM</a></li>
-                     <li><a href="#" class="menu-footer__sub-link">EQUAL VOICE</a></li>
-                  </ul>
-               </li>
-               <li>
-                  <a href="" class="menu-footer__link">Training & Placing
-                     
-                  </a>
-                  
-               </li>
-            </ul>
-            <ul class="menu-footer__list right">
-               <li><a href="#" class="menu-footer__link">Drop the Gun, Pick up the Pen</a></li>
-               <li><a href="#" class="menu-footer__link">Sports 4 Development</a></li>
-               <li><a href="#" class="menu-footer__link">Peace by Africa</a></li>
-               <li><a href="#" class="menu-footer__link">Get Involved</a></li>
-               <li><a href="#" class="menu-footer__link">Press</a></li>
-               <li><a href="#" class="menu-footer__link">Awards</a></li>
-            </ul>
-         </nav>
+
          <div class="footer__socials">
-            <a href="#" class="footer__logo">
+            <a href="index.html" class="footer__logo">
                <img src="img/header-logo.svg" alt="footer-logo">
             </a>
             <div class="footer__contacts">
@@ -1161,13 +1188,13 @@
       <p>© Elman Peace 2023. All rights reserved.</p>
    </div>
 </footer>
-   <script src="https://code.jquery.com/jquery-3.6.3.min.js?_v=20230414184359"></script>
-   <script src="files//ScrollMagic.min.js?_v=20230414184359"></script>
-   <script src="files//debug.addIndicators.min.js?_v=20230414184359"></script>
-   <script src="files//animation.gsap.min.js?_v=20230414184359"></script>
-   <script src="files//gsap.min.js?_v=20230414184359"></script>
-   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20230414184359"></script>
-   <script src="js/app.min.js?_v=20230414184359"></script>
+   <script src="https://code.jquery.com/jquery-3.6.3.min.js?_v=20230427011334"></script>
+   <script src="files//ScrollMagic.min.js?_v=20230427011334"></script>
+   <script src="files//debug.addIndicators.min.js?_v=20230427011334"></script>
+   <script src="files//animation.gsap.min.js?_v=20230427011334"></script>
+   <script src="files//gsap.min.js?_v=20230427011334"></script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20230427011334"></script>
+   <script src="js/app.min.js?_v=20230427011334"></script>
 </body>
 
 </html>
